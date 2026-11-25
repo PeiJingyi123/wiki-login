@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Enable Thymeleaf template attributes. -->
+<head>
+    <meta charset="UTF-8"> <!-- Use UTF-8 so all characters display correctly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout. -->
+    <title>Wiki Administrator Login</title> <!-- Browser tab title. -->
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- Link the shared stylesheet. -->
+</head>
+<body>
+<div class="card"> <!-- Centered login panel. -->
+    <h1>Wiki Administrator Login</h1>
+    <p class="subtitle">Please enter your username and password</p>
+
+    <!-- Error message: only rendered when the Controller adds "errorMessage" to the Model. -->
+    <p class="error" th:if="${errorMessage}" th:text="${errorMessage}"></p>
+
+    <!--
+      The form posts to /login. th:object binds this form to the "loginForm"
+      attribute that the Controller placed in the Model.
+    -->
+    <form th:action="@{/login}" th:object="${loginForm}" method="post">
+
+        <label for="username">Username</label>
+        <!-- th:field binds this input to LoginForm.username; required = client-side check. -->
+        <input type="text" id="username" th:field="*{username}" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <!-- type="password" hides the typed characters. -->
+        <input type="password" id="password" th:field="*{password}" placeholder="Enter password" required>
+
+        <button type="submit">Login</button> <!-- Submits the form via POST. -->
+    </form>
+
+    <p class="hint">Hint: username = <strong>pei</strong>, password = <strong>123</strong></p>
+</div>
+</body>
+</html>
