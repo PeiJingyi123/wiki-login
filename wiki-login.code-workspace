@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "wiki-login",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/target": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "redhat.java"
+    ]
+  }
+}
