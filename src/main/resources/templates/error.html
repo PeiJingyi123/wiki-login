@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Error - Wiki</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- Shared stylesheet. -->
+</head>
+<body>
+<div class="card">
+    <h1 class="failure">Login Failed</h1>
+
+    <!-- th:text displays the error message placed in the Model by the Controller. -->
+    <p class="error" th:text="${errorMessage}">Invalid username or password.</p>
+
+    <!-- Navigation link that lets the user try logging in again. -->
+    <a class="button-link" th:href="@{/login}">Try Again</a>
+</div>
+</body>
+</html>
