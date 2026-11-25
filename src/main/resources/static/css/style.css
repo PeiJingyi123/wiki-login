@@ -1,0 +1,89 @@
+
+* { box-sizing: border-box; }
+
+/* Page background and centred content using flexbox. */
+body {
+    margin: 0;                          /* Remove default browser margin. */
+    min-height: 100vh;                  /* Fill the whole viewport height. */
+    display: flex;                      /* Enable flexbox layout. */
+    align-items: center;                /* Centre vertically. */
+    justify-content: center;            /* Centre horizontally. */
+    background: #eef2f7;                /* Light blue-grey background. */
+    font-family: Arial, Helvetica, sans-serif; /* Clean sans-serif font. */
+    color: #222;                        /* Dark text for contrast. */
+}
+
+/* The white card that holds each page's content. */
+.card {
+    width: 360px;                       /* Fixed, readable width. */
+    padding: 32px;                      /* Inner spacing. */
+    background: #ffffff;                /* White surface. */
+    border-radius: 10px;                /* Rounded corners. */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Soft drop shadow. */
+    text-align: center;                 /* Centre the text. */
+}
+
+h1 { font-size: 22px; margin: 0 0 6px; }        /* Main heading style. */
+.subtitle { color: #666; margin: 0 0 20px; font-size: 14px; } /* Small grey subtitle. */
+
+/* Form labels sit above their inputs. */
+label {
+    display: block;                     /* Force label onto its own line. */
+    text-align: left;                   /* Left-align label text. */
+    font-weight: bold;                  /* Emphasise the label. */
+    margin: 14px 0 6px;                 /* Spacing around the label. */
+}
+
+/* Text inputs for username and password. */
+input {
+    width: 100%;                        /* Fill the card width. */
+    padding: 10px;                      /* Inner spacing. */
+    border: 1px solid #ccc;             /* Light grey border. */
+    border-radius: 5px;                 /* Slightly rounded corners. */
+    font-size: 14px;                    /* Readable text size. */
+}
+
+/* The blue Login submit button. */
+button {
+    width: 100%;                        /* Full width button. */
+    margin-top: 22px;                   /* Space above the button. */
+    padding: 11px;                      /* Button height. */
+    background: #2563eb;                /* Blue background (matches the brief). */
+    color: #fff;                        /* White text. */
+    border: none;                       /* Remove default border. */
+    border-radius: 5px;                 /* Rounded corners. */
+    font-size: 15px;                    /* Readable text. */
+    cursor: pointer;                    /* Show hand cursor on hover. */
+}
+button:hover { background: #1d4ed8; }   /* Darker blue on hover. */
+
+/* Styled link used as a "button" on the welcome and error pages. */
+.button-link {
+    display: inline-block;              /* Acts like a button but is a link. */
+    margin-top: 22px;                   /* Space above. */
+    padding: 11px 24px;                 /* Button-like padding. */
+    background: #2563eb;                /* Blue background. */
+    color: #fff;                        /* White text. */
+    text-decoration: none;              /* Remove underline. */
+    border-radius: 5px;                 /* Rounded corners. */
+}
+.button-link:hover { background: #1d4ed8; } /* Darker blue on hover. */
+
+/* Success and failure heading colours. */
+.success { color: #15803d; }            /* Green for successful login. */
+.failure { color: #b91c1c; }            /* Red for failed login. */
+
+/* Error message styling. */
+.error {
+    background: #fee2e2;                /* Light red background. */
+    color: #b91c1c;                     /* Dark red text. */
+    padding: 10px;                      /* Inner spacing. */
+    border-radius: 5px;                 /* Rounded corners. */
+    margin: 12px 0;                     /* Spacing. */
+}
+
+/* General informational message on the welcome page. */
+.message { margin: 12px 0; line-height: 1.5; } /* Comfortable line spacing. */
+
+/* Small hint under the login form (for demonstration purposes). */
+.hint { margin-top: 18px; font-size: 12px; color: #888; } /* Grey, small hint text. */
