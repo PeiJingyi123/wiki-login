@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Wiki</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- Shared stylesheet. -->
+</head>
+<body>
+<div class="card">
+    <h1 class="success">Login Successful</h1>
+
+    <!-- th:text replaces the placeholder with the username supplied by the Controller. -->
+    <p class="message">Welcome, <strong th:text="${username}">admin</strong>!</p>
+    <p class="message">You have successfully authenticated as the Wiki Administrator.</p>
+
+    <!-- Navigation link back to the login page. -->
+    <a class="button-link" th:href="@{/login}">Back to Login</a>
+</div>
+</body>
+</html>
